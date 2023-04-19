@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<title>Criptografia</title>
+		<title>Sistema de criptografia</title>
 	
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header>
@@ -16,11 +16,16 @@
 		<main>
 			<form>
 				<label for="areaTexto">Digite seu texto</label>
-				<textarea id="areaTexto"></textarea>
+				<input type="tex" id="areaTexto" class="caixaTexto">
 				
+				<input type="text" id="areaResultado" class="caixaTexto">
+
 				<img src="imagens/menino.svg" class="menino">
 				<input type="submit" value="Criptografar" class="botao">
 				<input type="submit" value="Descriptografar" class="botao">
 			</form>
 		</main>
+		<footer>
+			Sistema desenvolvido por Jefferson Marinho.
+		</footer>
 	</body>
