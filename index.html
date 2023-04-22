@@ -7,24 +7,41 @@
 	
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 	</head>
 	<body>
 		<header>
-		<img src="imagens/logo-alura.png">
+			<nav>
+				<img src="logo-alura.png" id="logo">
+				<ul>
+					<li>LINKEDIN</li>
+					<li>GIT</li>
+					<li>EMAIL</li>
+				</ul>
+			</nav>
 		</header>
-		
 		<main>
-			<form>
-				<label for="areaTexto">Digite seu texto</label>
-				<input type="tex" id="areaTexto" class="caixaTexto">
-				
+			<article>
+				<textarea id="areaTexto" rows="7" cols="40">Digite seu texto</textarea>
+				<div class="botoes">
+					<p>
+						<span class="material-symbols-outlined">
+						error
+						</span>
+						Apenas letras minúsculas e sem acento.
+					</p>
+					<button id="btn-criptografar">Criptografar</button>
+					<button id="btn-descriptografar">Descriptografar</button>
+				</div>
+			</article>
+			<aside>
+				<img src="menino.svg" class="menino">
+				<p>Nenhuma mensagem encontrada</p>
+				<p>Digite um texto que você deseja criptografar ou descriptografar.</p>
 				<input type="text" id="areaResultado" class="caixaTexto">
-
-				<img src="imagens/menino.svg" class="menino">
-				<input type="submit" value="Criptografar" class="botao">
-				<input type="submit" value="Descriptografar" class="botao">
-			</form>
+			</aside>
 		</main>
+
 		<footer>
 			Sistema desenvolvido por Jefferson Marinho.
 		</footer>

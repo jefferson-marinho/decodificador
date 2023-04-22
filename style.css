@@ -1,31 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+--branco: #ffffff;
+--preto: #000000;
+
+--color1: #DEDEDE; 
+--color2: #919191; 
+--color3: #454545; 
+--color4: #586D8F; 
+--color5: #0A2B5E; 
+}
+body{
+	margin: auto;
+	font-family: 'Inter';
+}
+header {
+	background-color: var(--color1);
+	text-align: -webkit-center;
+
+}
+nav {
+	max-width: 1400px;	
+	padding: 20px;
+	color: var(--color4);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+header li{
+	display: inline;
+	margin-left: 20px;
+	
+}
 main{
-	/* posicionamento */
-
-	position: absolute;
-	width: 680px;
-	height: 48px;
-	left: 240px;
-	top: 168px;
-
+	background-color: var(--branco);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#areaTexto {
+	color: var(--color4);
+    font-style: normal;
+	font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+	resize: none;
+	padding: 20px 10px;
+	border: none;
+	
+}
+.botoes{
+    position: relative;
+	margin: 15px;
+}
+.botoes > p {
+    text-align: left;
+    opacity: 0.8;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+}
+.botoes button{
+	border-radius: 18px;
+	width: 328px;
+	height: 57px;
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 150%;
-	/* identical to box height, or 48px */
-
-
-	/* Dark blue/dark-blue-300 */
-
-	color: #0A3871;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
 }
+#btn-criptografar{
+	background-color: var(--color5);
+	color: var(--branco);
+}
+#btn-descriptografar{
+	background-color: var(--color1);
+	border: 1px solid var(--color2);
+}
+aside{
 
-/* High quality products 1 1 */
+	display: inline-block;
+	padding: 15PX;
+	text-align: center;
+	max-width: 300px;
+}
+aside p{
+	margin: 10px;
+	padding: 10px;
+}
+footer{
+	background-color: var(--color1);
+	padding: 30px;
+	color: var(--color4);
+	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
-.menino{
-	position: absolute;
-	width: 336px;
-	height: 304px;
-	left: 1032px;
-	top: 283px;
 }
