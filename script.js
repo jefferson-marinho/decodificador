@@ -3,21 +3,18 @@ var btnCriptografar = document.getElementById('btn-criptografar');
 var btnDescriptografar = document.getElementById('btn-descriptografar');
 var btnCopiar = document.getElementById('btnCopiar');
 var result = document.getElementById('containerResult');
-var menu = document.getElementById('menu')
 var estadoMenu = false
 areaTexto.addEventListener('keypress', validatexto)
 
 function validatexto (event){
     var regex = new RegExp("^[a-z \b\0]+$");
     var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-
     if (!regex.test(key)){
         event.preventDefault();
         atencao();
         return false;
     }
 }
-
 function atencao(){
     var texto = document.querySelector('article > textarea + p')
     texto.style.color = 'blue'
@@ -44,7 +41,6 @@ function criptografar(){
     var textoCriptografado = "" ;
     var texto = areaTexto.value
     btnCopiar.hidden = false
-
     for (let i = 0; i < texto.length; i++) {
         if (texto[i] == 'a'){
             letra = "ai";
@@ -67,7 +63,6 @@ function criptografar(){
         }else{
             textoCriptografado = textoCriptografado + texto[i]
         }
-        
     }
     result.innerHTML = codigohtml(textoCriptografado)
 }
@@ -76,7 +71,6 @@ function descriptografar(){
     var textoDescriptografado = texto;
     var decodificar = true
     btnCopiar.hidden = false
-
     while (decodificar){
         if (textoDescriptografado.indexOf('ai') !== -1){
             var inicio = textoDescriptografado.indexOf('ai')
@@ -110,21 +104,11 @@ result.innerHTML = codigohtml(textoDescriptografado)
 }
 function codigohtml(texto){
     var result = document.getElementById('btnCopiar').addEventListener('click', copiaResult)
-
     return '<textarea id="result">'+ texto +'</textarea>' 
 }
 function copiaResult(){
     document.getElementById('result').select();
     document.execCommand("copy");
-}
-function menuAbreFecha(){
-    if (estadoMenu == false){
-        estadoMenu = true
-        menu.innerHTML = '<ul><li>LINKEDIN</li><li>GIT</li><li>EMAIL</li></ul>'
-    }else{
-        menu.innerHTML = '';
-        estadoMenu = false
-    }
 }
 btnCriptografar.onclick = criptografar
 btnDescriptografar.onclick = descriptografar
