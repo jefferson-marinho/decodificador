@@ -12,10 +12,10 @@
 body{
 	margin: auto;
 	font-family: 'Inter';
+	overflow-x: hidden;
 }
 header {
 	background-color: var(--color1);
-	text-align: -webkit-center;
 
 }
 nav {
@@ -30,17 +30,25 @@ nav {
 header li{
 	display: inline;
 	margin-left: 20px;
-	
+}
+#menuHamburguer {/*menu amburguer*/
+    display: none;
 }
 main{
 	background-color: var(--branco);
 	display: flex;
-	justify-content: space-evenly;
 	align-items: center;
+	justify-content: center;
 	text-align: center;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-#areaTexto {
+article{
+width: 60%;
+max-width: 800px;
+}
+
+#areaTexto, #result {
+
 	color: var(--color4);
     font-style: normal;
 	font-family: 'Inter';
@@ -50,51 +58,71 @@ main{
 	resize: none;
 	padding: 20px 10px;
 	border: none;
+	height: 400px;
+    width: 90%;
+}
+
+.botoes{
+	display: flow-root;
+	margin:auto;
 	
 }
-.botoes{
-    position: relative;
-	margin: 15px;
-}
-.botoes > p {
+article > p {
     text-align: left;
     opacity: 0.8;
-    padding: 18px;
-    display: flex;
-    align-items: center;
+	margin-top: 20px;
+	margin-left: 8%;
+	width: 90%;
 }
-.botoes button{
+.botoes button, #btnCopiar{
 	border-radius: 18px;
-	width: 328px;
-	height: 57px;
+	width: 40%;
+	min-width: 9em;
+	height: 3em;
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
+	margin: 0px 10px;
 }
 #btn-criptografar{
 	background-color: var(--color5);
 	color: var(--branco);
 }
-#btn-descriptografar{
+#btn-descriptografar, #btnCopiar{
 	background-color: var(--color1);
 	border: 1px solid var(--color2);
 }
-aside{
+#containerResult{
 
 	display: inline-block;
 	padding: 15PX;
+	width: 60%;
 	text-align: center;
-	max-width: 300px;
+	max-width: 600px;
 }
-aside p{
-	margin: 10px;
+#containerResult p{
+	margin: auto;
 	padding: 10px;
+
 }
+#result{
+	font-size: 1.4em;
+	overflow: auto;
+	text-align: center;
+	border: none;
+}
+.menino{
+	width: 100%;
+}
+
 footer{
 	background-color: var(--color1);
+	width: -webkit-fill-available;
+	overflow-x: hidden;
+	margin-top: 30px;
 	padding: 30px;
 	color: var(--color4);
 	text-align: center;

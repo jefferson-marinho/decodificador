@@ -1,0 +1,26 @@
+
+.menino{
+    display: none;
+}
+main{
+    
+    flex-direction: column;
+}
+article{
+    width: 90%;
+}
+#containerResult{
+    width: 90%;
+}
+#result{
+	height: auto;
+}
+#btnCopiar{
+    width: 90%;
+}
+aside{
+    margin: 10px 20px;
+}
+.material-symbols-outlined {/*menu amburguer*/
+    display: none;
+}
