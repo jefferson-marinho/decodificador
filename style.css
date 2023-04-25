@@ -30,7 +30,7 @@ header li{
 	display: inline;
 	margin-left: 20px;
 }
-header li img{
+header li a img{
 	width: 40px;
 	height: 40px;
 }
